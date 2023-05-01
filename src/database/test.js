@@ -10,7 +10,7 @@ Database.then(async (db) => {
   }
 
   const classValue = {
-    subject: "Química",
+    subject: 1,
     cost: "20",
   }
 
@@ -33,7 +33,22 @@ Database.then(async (db) => {
   //   classScheduleValues,
   // })
 
-  const selectedProffys = await db.all("SELECT * FROM proffys")
+  // const selectedProffys = await db.all("SELECT * FROM proffys")
+  // console.log(selectedProffys)
 
-  console.log(selectedProffys)
+  // const selectClassesAndProffys = await db.all(`
+  //   SELECT classes.*, proffys.* FROM proffys
+  //   JOIN classes ON classes.proffy_id = proffys.id
+  //   WHERE proffys.id = 1;
+  // `)
+  // console.log(selectClassesAndProffys)
+
+  // const selectClassesSchedules = await db.all(`
+  //   SELECT class_schedule.* FROM class_schedule
+  //   WHERE class_schedule.class_id = 1
+  //   AND class_schedule.weekday = "0"
+  //   AND class_schedule.time_from <= 520
+  //   AND class_schedule.time_to > 520;
+  // `)
+  // console.log(selectClassesSchedules)
 })

@@ -24,6 +24,7 @@
   padding: 1.2rem 1.6rem;
   height: 16rem;
   resize: vertical;
+  line-height: 2.6rem;
 }
 
 .input-block,

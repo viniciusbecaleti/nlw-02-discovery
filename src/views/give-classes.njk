@@ -36,7 +36,7 @@
       </header>
 
       <main>
-        <form action="" id="create-class">
+        <form method="post" id="create-class">
           <fieldset>
             <legend>Seus dados</legend>
 
@@ -48,7 +48,7 @@
             <div class="input-block">
               <label for="avatar">
                 Link da sua foto
-                <small>(comece com //http)</small>
+                <small>(comece com http://)</small>
               </label>
               <input type="url" name="avatar" id="avatar" required />
             </div>
@@ -74,7 +74,7 @@
               <label for="subject">Matéria</label>
               <select name="subject" id="subject" required>
                 {% for subject in subjects %}
-                  <option value="{{loop.index}}">{{subject}}</option>
+                  <option value="{{loop.index0}}">{{subject}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -99,7 +99,7 @@
                 <label for="weekday">Dia da semana</label>
                 <select name="weekday[]" required>
                   {% for weekday in weekdays %}
-                    <option value="{{loop.index}}">{{weekday}}</option>
+                    <option value="{{loop.index0}}">{{weekday}}</option>
                   {% endfor %}
                 </select>
               </div>
